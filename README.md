@@ -8,7 +8,12 @@ Tuto suivi : https://dev.to/paurakhsharmaflask-rest-api-part-0-setup-basic-crud-
 
 # II. Installation Flask
     - Ouvrir un terminal dans le répertoire 'Flask'
-    - Créer un environnement virtuel qui isole les packages python du projet Flask des autres packages python : ```sudo -H pip install -U pipenv```
+    - Créer un environnement virtuel qui isole les packages python du projet Flask des autres packages python : 
+    ```
+    
+    sudo -H pip install -U pipenv
+    
+    ```
     - Installation de Flask : ```pipenv install flask```
     - Activation de l'environnement virtuel créé : ```pipenv shell```
     - Exporter la variable d'environnement : ```export ENV_FILE_LOCATION=./.env```
