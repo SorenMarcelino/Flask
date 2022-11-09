@@ -17,6 +17,13 @@ III. Installation MongoDB
     Windows (ne pas oublier d'installer mongosh, non inclus dans le package .msi (tout est dans le lien)) : https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
     macOS : https://dev.to/paurakhsharma/flask-rest-api-part-1-using-mongodb-with-flask-3g7d
     Linux : https://www.mongodb.com/docs/manual/administration/install-on-linux/
+    - macOS : 
+        - Emplacement d'installation : /usr/local/var/mongodb
+        - Lancer MongoDB comme un service macOS : brew services start mongodb-community@6.0
+        - Lancer mongosh : mongosh
+        - Utiliser une table : use nom-table (ex: use Vin)
+        - Afficher le contenu d'une collection : db.nom_collection.find()
+        - Supprimer le contenu d'une collection : db.nom_collection.deleteMany({})
 
 IV. Lancer le serveur
     - Lancer le serveur écoutant sur l'ip de la machine : flask run --host=ip_a_utiliser //ATTENTION : l'ip change suivant le réseau connecté, changer 'ip_a_utiliser' de la commande au besoin
