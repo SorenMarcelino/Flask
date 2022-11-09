@@ -1,0 +1,16 @@
+vins = [
+    {
+        "nom": "BOURGOGNE HAUTES-CÔTES DE BEAUNE",
+        "producteur": "Nuiton Beaunoy",
+        "cepage": "Pinot noir",
+        "couleur": "Rouge",
+        "region": "Bourgogne"
+    },
+    {
+        "nom": "CHATILLON-EN-DIOIS",
+        "producteur": "Cave de Die Jaillance",
+        "cepage": "Aligoté",
+        "couleur": "Blanc",
+        "region": "Vallee du Rhone"
+    }
+]
