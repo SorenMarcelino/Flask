@@ -42,6 +42,6 @@ class VinApi(Resource):
         else: 
             return {'error': 'Permission denied'}, 401
 
-    def get(self, vin_id):
-        vins = Vin.objects.get(id=vin_id).to_json()
+    def get(self, vin_nom):
+        vins = Vin.objects.get(nom=vin_nom).to_json()
         return Response(vins, mimetype="application/json", status=200)

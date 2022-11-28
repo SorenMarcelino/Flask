@@ -21,6 +21,7 @@ class User(db.Document):
     email = db.EmailField(required=True, unique=True)
     password = db.StringField(required=True, min_length=6)
     avatar = db.StringField(required=True, unique=False)
+    token = db.StringField(required=False, unique=False)
 
     def hash_password(self):
         self.password = generate_password_hash(self.password).decode('utf8')
@@ -29,7 +30,8 @@ class User(db.Document):
         return check_password_hash(self.password, password)
 
 class Commentaire(db.Document):
-    added_by = db.ReferenceField('User')
-    vin_commente_id = db.ReferenceField('Vin')
+    added_by = db.StringField(required=True, unique=False)
+    vin_commente_id = db.StringField(required=True, unique=False)
     date = db.DateTimeField(default=datetime.datetime.utcnow)
     commentaire = db.StringField(required=True, unique=False)
+    

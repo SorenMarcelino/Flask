@@ -13,7 +13,7 @@ class CommentairesApi(Resource):
     def post(self, vin_id):
         user_id = get_jwt_identity()
         body = request.get_json()
-        commentaire = Commentaire(**body, added_by=user_id, vin_commente_id=vin_id)
+        commentaire = Commentaire(**body, added_by=str(user_id), vin_commente_id=str(vin_id))
         commentaire.save()
         id = commentaire.id
         return {'id': str(id)}, 200
