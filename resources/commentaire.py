@@ -6,7 +6,7 @@ from flask_restful import Resource
 # Tous les commentaires d'un vin
 class CommentairesApi(Resource):
     def get(self, vin_id):
-        commentaires = Commentaire.objects().to_json()
+        commentaires = Commentaire.objects(vin_commente_id=str(vin_id)).to_json()
         return Response(commentaires, mimetype="application/json", status=200)
     
     @jwt_required()

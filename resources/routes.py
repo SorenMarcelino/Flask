@@ -4,7 +4,7 @@ from .commentaire import CommentairesApi, CommentaireApi
 
 def initialize_routes(api):
     api.add_resource(VinsApi, '/api/vins')
-    api.add_resource(VinApi, '/api/vin/<vin_nom>')
+    api.add_resource(VinApi, '/api/vin/<vin_id>')
 
     api.add_resource(SignupApi, '/api/auth/signup')
     api.add_resource(LoginApi, '/api/auth/login')
