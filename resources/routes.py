@@ -1,6 +1,6 @@
 from .vin import VinsApi, VinApi
 from .auth import SignupApi, LoginApi, UserApi
-from .commentaire import CommentairesApi, CommentaireApi
+from .commentaire import CommentairesApi, CommentaireApi, NoteApi
 
 def initialize_routes(api):
     api.add_resource(VinsApi, '/api/vins')
@@ -12,3 +12,4 @@ def initialize_routes(api):
 
     api.add_resource(CommentairesApi, '/api/vin/<vin_id>/commentaires')
     api.add_resource(CommentaireApi, '/api/vin/<vin_id>/commentaire/<commentaire_id>')
+    api.add_resource(NoteApi, '/api/vin/<vin_id>/commentaires/<user_id>')

@@ -43,3 +43,9 @@ class CommentaireApi(Resource):
     def get(self, vin_id, commentaire_id):
         commentaires = Commentaire.objects.get(id=commentaire_id).to_json()
         return Response(commentaires, mimetype="application/json", status=200)
+
+class NoteApi(Resource): # GET tout les commentaires d'un user sur un vin  ayant une note
+        @jwt_required()
+        def get(self, vin_id, user_id):
+            commentaires = Commentaire.objects.get(added_by=user_id, vin_commente_id=vin_id, note__ne=None).to_json()
+            return Response(commentaires, mimetype="application/json", status=200)

@@ -34,4 +34,5 @@ class Commentaire(db.Document):
     vin_commente_id = db.StringField(required=True, unique=False)
     date = db.DateTimeField(default=datetime.datetime.utcnow)
     commentaire = db.StringField(required=True, unique=False)
+    note = db.IntField(required=False, unique=False)
     
